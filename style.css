@@ -28,22 +28,55 @@
 	src: url(assets/fonts/montserrat/Montserrat-Light.ttf);
 }
 
-/*HEADER START*/
-
-#navbar {
-	background-color: #000;
-}
-#navbar a {
-	color: white;
-	list-style-type: none;
-	text-decoration: none;
+@font-face {
+	font-family: MontserratThin;
+	src: url(assets/fonts/montserrat/Montserrat-Thin.ttf);
 }
 
-#nav-logo {
-	width: 2.5em;
-	padding: 0;
-	vertical-align: middle;
-	margin: 0 auto;
+.center {
+	text-align: center;
+}
+
+.bg {
+	background-image: url(assets/images/bg.png);
+}
+
+.mrgnd {
+	margin: 0 3rem;
+}
+
+.pad {
+	padding: 2rem 0 2rem 0;
+}
+
+.padtop {
+	padding-top: 4rem;
+}
+
+.padbottom {
+	padding-bottom: 4rem;
+}
+
+.nopad {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.bordbottom {
+	border-bottom: 1px solid #ccc;
+}
+
+.bordtop {
+	border-top: 1px solid #ccc;
+}
+
+.wrapper {
+	padding: 4rem 0;
+	margin: 0;
+}
+
+main {
+	background-color: #fcfcfc;
 }
 
 ul {
@@ -56,6 +89,11 @@ li {
 	font-size: 1rem;
 	line-height: 4.5em;
 	font-family: MontserratLight;
+	list-style-type: none;
+}
+
+a {
+	color: #777;
 }
 
 h1,
@@ -66,6 +104,58 @@ h5 {
 	font-family: Montserrat;
 	padding: .5rem 0;
 	margin: 0rem;
+}
+
+h2 {
+	font-size: 1.6rem;
+}
+
+h3 {
+	font-size: 1.2rem;
+	letter-spacing: .1rem;
+}
+
+div	{
+	padding: 2em 4em;
+}
+
+p {
+	font-family: Domine;
+	color: #404040;
+	line-height: 1.75rem;
+	margin: 0;
+	padding: 1rem 0;
+}
+
+button {
+	background-color: #00afc4;
+	border: none;
+}
+
+button > h4 {
+	color: #fff;
+	font-family: MontserratThin;
+	padding: 1rem;
+	margin: 0;
+}
+
+/*HEADER START*/
+
+#navbar {
+	background-color: #000;
+	padding: 0;
+}
+#navbar a {
+	color: white;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+#nav-logo {
+	width: 2.5em;
+	padding: 0;
+	vertical-align: middle;
+	margin: 0 auto;
 } 
 
 .banner {
@@ -73,14 +163,8 @@ h5 {
 	padding: 4.5rem 2.5rem;
 }
 
-.banner h1 {
-	text-align: center;
-}
-
 .banner h3 {
 	color: #fff;
-	text-align: center;
-	letter-spacing: .1rem;
 }
 
 @media (min-width: 550px) {
@@ -97,7 +181,7 @@ h5 {
 	}
 
 	li,
-	a {
+	nav a {
 		display: inline-block;
 		vertical-align: top;
 		margin: 0 .5rem;
@@ -113,28 +197,251 @@ h5 {
 		font-size: 2.5em;
 	}
 
-	.banner h3 {
+	h2 {
+		font-size: 1.75em
+	}
+
+	h3 {
 		font-size: 1.3em;	
+	}
+
+	p {
+		font-size: 1.15em;	
 	}
 
 }
 
 /*HEADER END*/
 
-/*MAIN START*/
+/*INDEX MAIN START*/
 
-div	{
-	padding: 2.75em 4em;
+#logo-large {
+	display: none;
 }
 
-p {
-	font-family: Domine;
-	color: #404040;
-	line-height: 1.75rem;
+@media (min-width: 550px) and (max-width: 799px) {
+	#logo-large {
+		display: inline-block;
+		width: 45%;
+		float: right;
+	}
+
+	.box {
+		width: 50%;
+		float: left;
+	}
+
+	.box:nth-of-type(2n + 1) {
+		clear: left;
+	}
+
+	#prefoot {
+		clear: both;
+	}
+
+	main h2:before,
+	main h2:after {
+		content: "\22c5";
+	}
+}
+
+@media (min-width: 800px) {
+	#logo-large {
+		display: none;
+	}
+
+	.box {
+		width: 33.33%;
+		float: left;
+	}
+
+	.box:nth-of-type(3n + 1) {
+		clear: left;
+	}
+
+	main h2:before,
+	main h2:after {
+		content: "\22c5";
+	}
 }
 
 
-/*MAIN END*/
+/*INDEX MAIN END*/
+
+/*ABOUT MAIN START*/
+
+.org {
+	width: 4.25rem;
+	padding: 1rem 0;
+}
+
+@media (min-width: 550px) and (max-width: 799px) {
+	.org {
+		width: 7rem;
+	}
+}
+
+@media (min-width: 800px) {
+	.org {
+		width: 13rem;
+	}
+}
+
+/*ABOUT MAIN END*/
+
+/*CONS MAIN START*/
+
+.spec {
+	width: 9em;
+	display: block;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+@media (min-width: 550px) {
+	.spec {
+		width: 13rem;
+		padding: 1rem 0 1rem 1rem;
+		float: right;
+	}
+
+	.alt {
+		float: left;
+		padding: 1rem 1rem 1rem 0;
+	}
+}
+
+@media (min-width: 800px) {
+	.spec {
+		width: 15em;
+	}
+}
+
+/*CONS MAIN END*/
+
+/*TRAIN MAIN START*/
+
+.tag {
+	padding: .15rem;
+	margin: .25rem .2rem;
+	display: inline-block;
+	float: left;
+}
+
+#teal {
+	background-color: #57d8ab; 
+}
+
+#black {
+	background-color: #000;
+}
+
+#red {
+	background-color: #d75a4a;
+}
+
+.tag > p {
+	font-family: monospace;
+	font-size: .5rem;
+	color: #fff;
+	width: 5em;
+	padding: 0;
+}
+
+.tag ~ p {
+	clear: both;
+}
+
+form h4 {
+	padding: .5rem .25rem;
+}
+
+#signup {
+	color: #aaa;
+	border: none;
+	width: 15em;
+	margin-top: 1rem;
+	padding: .75rem .25rem;
+}
+
+@media (min-width: 800px) {
+	.tag {
+		position: absolute;
+		left: -5rem;
+		top: 2.5rem;
+		display: block;
+		clear: left;
+	}
+
+	#black {
+		top: 5rem;
+	}
+
+	.posrel {
+		position: relative;
+		margin-left: 7rem;
+		margin-right: 7rem;
+	}
+}
+
+/*TRAIN MAIN END*/
+
+/*CONTACT MAIN START*/
+
+.map {
+	width: 13rem;
+}
+
+#info > div {
+	padding: .5rem 0;
+}
+
+#info > div > p {
+	padding: .15rem 0;
+}
+
+form > div {
+	padding: 1rem 0;
+}
+
+#contact input {
+	width: 100%;
+	height: 2.5rem;
+	border: none;
+}
+
+#contact textarea {
+	width: 100%;
+	border:none;
+	height: 15rem;
+}
+
+@media (min-width: 550px) {
+	#info p {
+		font-size: initial;
+	}
+
+	#contact {
+		width: 66.66%;
+		float: right;
+	}
+
+	#info {
+		width: 33.33%;
+		float: right;
+		margin: 2rem 0;
+		padding: 0 3rem;
+		border-bottom: none;
+		border-left: 1px solid #ccc;
+	}
+
+	.map {
+		display: block;
+		width: 100%;
+	}
+}
+
+/*CONTACT MAIN END*/
 
 /*FOOTER START*/
 
@@ -142,9 +449,12 @@ footer {
 	background-image: url(assets/images/bg.png);
 }
 
+#foot-navbar {
+	padding: 0;
+}
+
 #foot-navbar a {
 	color: #000;
-	list-style-type: none;
 	text-decoration: none;
 }
 
