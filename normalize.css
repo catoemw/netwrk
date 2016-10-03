@@ -37,7 +37,7 @@ footer,
 header,
 main, /* 2 */
 menu,
-nav,
+/*nav,*/
 section,
 summary { /* 1 */
   display: block;
@@ -151,7 +151,7 @@ dfn {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  /*margin: 0.67em 0;*/
 }
 
 /**

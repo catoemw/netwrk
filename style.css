@@ -10,12 +10,12 @@
 
 @font-face {
 	font-family: Domine;
-	src: url(assets/fonts/domnine/Domine-Regular.ttf);
+	src: url(assets/fonts/domine/Domine-Regular.ttf);
 }
 
 @font-face {
 	font-family: DomineBold;
-	src: url(assets/fonts/domnine/Domine-Bold.ttf);
+	src: url(assets/fonts/domine/Domine-Bold.ttf);
 }
 
 @font-face {
@@ -24,8 +24,8 @@
 }
 
 @font-face {
-	font-family: MontserratThin;
-	src: url(assets/fonts/montserrat/Montserrat-Thin.ttf);
+	font-family: MontserratLight;
+	src: url(assets/fonts/montserrat/Montserrat-Light.ttf);
 }
 
 /*HEADER START*/
@@ -33,47 +33,132 @@
 #navbar {
 	background-color: #000;
 }
+#navbar a {
+	color: white;
+	list-style-type: none;
+	text-decoration: none;
+}
 
-.logo {
+#nav-logo {
 	width: 2.5em;
-	padding: 1em 0 ;
-	display: block;
+	padding: 0;
+	vertical-align: middle;
 	margin: 0 auto;
 }
 
-header ul {
+ul {
 	padding: 0;
 	margin: 0;
 }
 
-header li,
-a {
+li {
 	text-align: center;
+	font-size: 1rem;
+	line-height: 4.5em;
+	font-family: MontserratLight;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: Montserrat;
+	padding: .5rem 0;
+	margin: 0rem;
+} 
+
+.banner {
+	background: linear-gradient(#01afc4, #5fdfef);
+	padding: 4.5rem 2.5rem;
+}
+
+.banner h1 {
+	text-align: center;
+}
+
+.banner h3 {
 	color: #fff;
+	text-align: center;
+	letter-spacing: .1rem;
+}
+
+@media (min-width: 550px) {
+	nav {
+		display: inline-block;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	ul {
+		display: inline-block;
+		width: 100%;
+		text-align: center; 
+	}
+
+	li,
+	a {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 .5rem;
+	}
+
+	#nav-logo {
+		width: 2.5em;
+		display: inline-block;
+		margin: 0 .5em;
+	}
+
+	.banner h1 {
+		font-size: 2.5em;
+	}
+
+	.banner h3 {
+		font-size: 1.3em;	
+	}
+
+}
+
+/*HEADER END*/
+
+/*MAIN START*/
+
+div	{
+	padding: 2.75em 4em;
+}
+
+p {
+	font-family: Domine;
+	color: #404040;
+	line-height: 1.75rem;
+}
+
+
+/*MAIN END*/
+
+/*FOOTER START*/
+
+footer {
+	background-image: url(assets/images/bg.png);
+}
+
+#foot-navbar a {
+	color: #000;
 	list-style-type: none;
 	text-decoration: none;
-	line-height: 4.5em;
-	font-family: MontserratThin;
 }
 
-#banner {
-	background: linear-gradient(#01afc4, #5fdfef);
-	font-family: Montserrat;
-	letter-spacing: .1em;
+#foot-navbar ul {
+	padding: .25rem 0;
 }
 
-#banner h1 {
-	text-align: center;
-	margin-top: 0;
-	font-size: 2.5em;
-	padding: 9rem 5rem .5rem 5rem;
 
-}
 
-#banner h2 {
-	color: #fff;
-	text-align: center;
-	margin: 0em;
-	padding: 0rem 2rem 9rem 2rem;
 
-}
+
+
+
+
+
+
+
